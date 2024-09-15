@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking App</title>
+</head>
+<body>
+    <h1>Note Taking Application</h1>
+    <form action="/" method="POST"> <!--Set method to POST and action to the current route-->
+        <input type="text" name="note" placeholder="Enter a note" required>
+        <button type="sumbit">Add Note</button>
+    </form>
+    <ul>
+    <!--Loop Through the notes and display each one as a list item-->
+    {% for note in notes%}
+        <li>{{ note }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
